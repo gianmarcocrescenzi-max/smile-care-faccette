@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faccette Dentali - Dott. Domenico Crescenzi | Smile Care</title>
+    <meta name="description" content="Guida completa alle faccette dentali. Scopri come ottenere un sorriso perfetto con il Dott. Domenico Crescenzi - Smile Care Italia.">
+    <meta property="og:title" content="Faccette Dentali - Smile Care">
+    <meta property="og:description" content="La soluzione moderna per un sorriso perfetto e naturale. Guida interattiva completa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smile-care.it">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    <link rel="canonical" href="https://smile-care.it">
+    <style>
+        :root {
+            --color-primary: #5B8FC2;
+            --color-primary-hover: #4a7aad;
+            --color-primary-light: #7CA8D4;
+            --color-bg: #f8f9fc;
+            --color-surface: #ffffff;
+            --color-text: #1a3a52;
+            --color-text-secondary: #5a7a92;
+            --color-accent: #5B8FC2;
+            --color-border: #e0e7f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8f9fc 0%, #e8f0f8 100%);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(91, 143, 194, 0.15);
+            border: 2px solid var(--color-border);
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 280px;
+            height: auto;
+        }
+
+        .doctor-name {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin: 30px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subtitle {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .tab-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: var(--color-surface);
+            color: var(--color-text);
+            border: 2px solid var(--color-border);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background: var(--color-primary-light);
+            color: white;
+            border-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dental-model {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(91, 143, 194, 0.15);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color-border);
+        }
+
+        .case-selector {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .case-btn {
+            padding: 12px 24px;
+            background: white;
+            color: var(--color-text);
+            border: 2px solid var(--color-border);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .case-btn:hover {
+            background: var(--color-primary-light);
+            color: white;
+            border-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .case-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .mouth-view {
+            background: linear-gradient(180deg, rgba(255, 182, 193, 0.2) 0%, rgba(255, 192, 203, 0.3) 100%);
+            border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+            padding: 60px 60px 40px;
+            margin: 40px auto;
+            max-width: 700px;
+            position: relative;
+            box-shadow: inset 0 10px 30px rgba(255, 182, 193, 0.4);
+        }
+
+        .mouth-view::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 30px;
+            background: linear-gradient(180deg, rgba(255, 192, 203, 0.4) 0%, transparent 100%);
+            border-radius: 50%;
+        }
+
+        .upper-teeth {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 0;
+            flex-wrap: nowrap;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .tooth {
+            width: 70px;
+            height: 100px;
+            background: linear-gradient(180deg, #ffffff 0%, #fafbfc 40%, #f0f3f6 100%);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding-bottom: 50px;
+            box-shadow: 
+                0 8px 20px rgba(0, 0, 0, 0.15),
+                inset 2px 0 3px rgba(0, 0, 0, 0.08),
+                inset -2px 0 3px rgba(0, 0, 0, 0.08),
+                inset 0 2px 4px rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tooth.incisor {
+            clip-path: polygon(
+                25% 0%,
+                75% 0%,
+                90% 8%,
+                95% 20%,
+                98% 35%,
+                100% 50%,
+                100% 70%,
+                98% 82%,
+                92% 90%,
+                82% 95%,
+                70% 98%,
+                50% 100%,
+                30% 98%,
+                18% 95%,
+                8% 90%,
+                2% 82%,
+                0% 70%,
+                0% 50%,
+                2% 35%,
+                5% 20%,
+                10% 8%
+            );
+        }
+        
+        .tooth.canine {
+            clip-path: polygon(
+                30% 0%,
+                70% 0%,
+                85% 5%,
+                92% 12%,
+                96% 22%,
+                98% 35%,
+                100% 50%,
+                100% 65%,
+                98% 75%,
+                94% 83%,
+                87% 90%,
+                77% 95%,
+                65% 98%,
+                50% 100%,
+                35% 98%,
+                23% 95%,
+                13% 90%,
+                6% 83%,
+                2% 75%,
+                0% 65%,
+                0% 50%,
+                2% 35%,
+                4% 22%,
+                8% 12%,
+                15% 5%
+            );
+        }
+
+        .tooth::before {
+            content: '';
+            position: absolute;
+            top: 12%;
+            left: 22%;
+            width: 30%;
+            height: 20%;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 40%, transparent 70%);
+            border-radius: 60% 40% 50% 50%;
+            filter: blur(2px);
+            transform: rotate(-20deg);
+        }
+        
+        .tooth.canine::before {
+            top: 15%;
+            left: 25%;
+            width: 28%;
+            height: 18%;
+        }
+
+        .tooth.with-veneer::before {
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 30%, rgba(91, 143, 194, 0.2) 60%, transparent 80%);
+            filter: blur(3px);
+            width: 40%;
+            height: 30%;
+        }
+
+        .tooth::after {
+            content: '';
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 20%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.03) 50%, rgba(0, 0, 0, 0.06) 100%);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        .tooth:hover {
+            transform: scale(1.15) translateY(-15px);
+            box-shadow: 
+                0 15px 35px rgba(91, 143, 194, 0.3),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8);
+        }
+
+        .tooth.stained {
+            background: linear-gradient(180deg, #f5f0e8 0%, #e8dcc8 50%, #d4c4a8 100%);
+        }
+
+        .tooth.chipped::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            width: 20px;
+            height: 25px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+            clip-path: polygon(0 0, 100% 20%, 80% 100%, 0% 80%);
+        }
+
+        .tooth.spaced {
+            margin-right: 25px;
+        }
+
+        .tooth.crooked {
+            transform: rotate(-8deg);
+        }
+
+        .tooth.crooked:nth-child(2) {
+            transform: rotate(6deg) translateY(-8px);
+        }
+
+        .tooth.canine {
+            height: 110px;
+            width: 65px;
+        }
+
+        .tooth.incisor {
+            height: 100px;
+            width: 70px;
+        }
+
+        .tooth.with-veneer {
+            background: linear-gradient(180deg, #ffffff 0%, #ffffff 40%, #fafeff 100%);
+            box-shadow: 
+                0 0 50px rgba(255, 255, 255, 0.9),
+                0 0 40px rgba(91, 143, 194, 0.6),
+                0 12px 30px rgba(91, 143, 194, 0.3),
+                inset 0 3px 10px rgba(255, 255, 255, 1),
+                inset 2px 0 5px rgba(255, 255, 255, 0.8),
+                inset -2px 0 5px rgba(255, 255, 255, 0.8);
+            animation: veneerGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes veneerGlow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 50px rgba(255, 255, 255, 0.9),
+                    0 0 40px rgba(91, 143, 194, 0.6),
+                    0 12px 30px rgba(91, 143, 194, 0.3),
+                    inset 0 3px 10px rgba(255, 255, 255, 1),
+                    inset 2px 0 5px rgba(255, 255, 255, 0.8),
+                    inset -2px 0 5px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+                box-shadow: 
+                    0 0 60px rgba(255, 255, 255, 1),
+                    0 0 50px rgba(91, 143, 194, 0.8),
+                    0 15px 40px rgba(91, 143, 194, 0.4),
+                    inset 0 4px 12px rgba(255, 255, 255, 1),
+                    inset 3px 0 8px rgba(255, 255, 255, 0.9),
+                    inset -3px 0 8px rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        .veneer-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(91, 143, 194, 0.1) 50%, rgba(255, 255, 255, 0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        
+        .tooth.incisor .veneer-layer {
+            clip-path: polygon(
+                25% 0%,
+                75% 0%,
+                90% 8%,
+                95% 20%,
+                98% 35%,
+                100% 50%,
+                100% 70%,
+                98% 82%,
+                92% 90%,
+                82% 95%,
+                70% 98%,
+                50% 100%,
+                30% 98%,
+                18% 95%,
+                8% 90%,
+                2% 82%,
+                0% 70%,
+                0% 50%,
+                2% 35%,
+                5% 20%,
+                10% 8%
+            );
+        }
+        
+        .tooth.canine .veneer-layer {
+            clip-path: polygon(
+                30% 0%,
+                70% 0%,
+                85% 5%,
+                92% 12%,
+                96% 22%,
+                98% 35%,
+                100% 50%,
+                100% 65%,
+                98% 75%,
+                94% 83%,
+                87% 90%,
+                77% 95%,
+                65% 98%,
+                50% 100%,
+                35% 98%,
+                23% 95%,
+                13% 90%,
+                6% 83%,
+                2% 75%,
+                0% 65%,
+                0% 50%,
+                2% 35%,
+                4% 22%,
+                8% 12%,
+                15% 5%
+            );
+        }
+
+        .tooth.with-veneer .veneer-layer {
+            opacity: 1;
+        }
+
+        .tooth-label {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .gum-line {
+            position: absolute;
+            top: -25px;
+            left: -20px;
+            right: -20px;
+            height: 40px;
+            background: linear-gradient(180deg, rgba(255, 140, 150, 0.5) 0%, rgba(255, 160, 170, 0.7) 50%, rgba(255, 140, 150, 0.6) 100%);
+            border-radius: 50%;
+            z-index: 0;
+            box-shadow: 0 -5px 15px rgba(255, 140, 150, 0.3);
+        }
+
+        .gum-line::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            right: 10%;
+            height: 10px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 120, 130, 0.4) 20%, rgba(255, 120, 130, 0.4) 80%, transparent 100%);
+            border-radius: 50%;
+        }
+
+        .case-description {
+            background: rgba(91, 143, 194, 0.05);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            background: var(--color-surface);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 3px 15px rgba(91, 143, 194, 0.12);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--color-border);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(91, 143, 194, 0.2);
+        }
+
+        .comparison-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .info-box {
+            background: rgba(91, 143, 194, 0.05);
+            border-left: 4px solid var(--color-primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            border-left-width: 4px;
+        }
+
+        .info-box.warning {
+            border-left-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .info-box.success {
+            border-left-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            background: var(--color-surface);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            margin-left: 40px;
+            position: relative;
+            box-shadow: 0 3px 15px rgba(91, 143, 194, 0.12);
+            border: 1px solid var(--color-border);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(91, 143, 194, 0.5);
+        }
+
+        .timeline-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .benefit-card {
+            background: var(--color-surface);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(91, 143, 194, 0.12);
+            border: 1px solid var(--color-border);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(91, 143, 194, 0.25);
+            border-color: var(--color-primary);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .interactive-demo {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px solid var(--color-border);
+            box-shadow: 0 5px 25px rgba(91, 143, 194, 0.1);
+        }
+
+        .demo-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 3px 10px rgba(91, 143, 194, 0.3);
+        }
+
+        .demo-btn:hover {
+            background: var(--color-primary-hover);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(91, 143, 194, 0.4);
+        }
+
+        .demo-btn:active {
+            transform: scale(0.98);
+        }
+
+        .demo-btn.secondary {
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 3px 10px rgba(91, 143, 194, 0.15);
+        }
+
+        .demo-btn.secondary:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .faq-item {
+            background: var(--color-surface);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 2px 8px rgba(91, 143, 194, 0.08);
+        }
+
+        .faq-item:hover {
+            background: rgba(91, 143, 194, 0.05);
+            border-color: var(--color-primary);
+            box-shadow: 0 3px 12px rgba(91, 143, 194, 0.15);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--color-text-secondary);
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 15px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .logo-container img {
+                max-width: 200px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .doctor-name {
+                font-size: 1rem;
+            }
+
+            .tab-container {
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+
+            .tab-btn {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+                flex: 1;
+                min-width: 80px;
+            }
+
+            .dental-model {
+                padding: 20px 15px;
+            }
+
+            .case-selector {
+                gap: 8px;
+            }
+
+            .case-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+                flex: 1;
+                min-width: 0;
+            }
+
+            .mouth-view {
+                padding: 50px 40px 30px;
+                max-width: 500px;
+            }
+
+            .upper-teeth {
+                gap: 3px;
+            }
+
+            .tooth {
+                width: 55px;
+                height: 80px;
+            }
+
+            .tooth:hover {
+                transform: scale(1.1) translateY(-10px);
+            }
+
+            .gum-line {
+                height: 30px;
+            }
+
+            .case-description {
+                font-size: 0.9rem;
+                padding: 12px 15px;
+            }
+
+            .demo-btn {
+                padding: 14px 20px;
+                font-size: 1rem;
+                width: 100%;
+                margin: 8px 0;
+            }
+
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .comparison-card {
+                padding: 20px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .benefit-card {
+                padding: 20px;
+            }
+
+            .benefit-icon {
+                font-size: 2.5rem;
+            }
+
+            .timeline-item {
+                margin-left: 25px;
+                padding: 20px;
+            }
+
+            .timeline-item::before {
+                width: 15px;
+                height: 15px;
+                left: -25px;
+            }
+
+            .info-box {
+                padding: 15px;
+                font-size: 0.95rem;
+            }
+
+            .faq-item {
+                padding: 15px;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+
+            .interactive-demo {
+                padding: 20px 15px;
+            }
+
+            ul li {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Touch-friendly enhancements */
+        @media (hover: none) and (pointer: coarse) {
+            .tab-btn, .case-btn, .demo-btn, .faq-item {
+                -webkit-tap-highlight-color: rgba(91, 143, 194, 0.2);
+            }
+
+            .tooth {
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .tooth:active {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .mouth-view {
+                padding: 40px 30px 20px;
+            }
+
+            .upper-teeth {
+                gap: 2px;
+            }
+
+            .tooth {
+                width: 48px;
+                height: 68px;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            .logo-container img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/832bc347-b80e-4212-b939-f39bfca89064" alt="Smile Care Logo" onerror="this.style.display='none'">
+            </div>
+            <h1>🦷 Faccette Dentali</h1>
+            <p class="subtitle">La soluzione moderna per un sorriso perfetto e naturale</p>
+            <p class="doctor-name">Dott. Domenico Crescenzi | <a href="https://smile-care.it" style="color: var(--color-primary); text-decoration: none;">smile-care.it</a></p>
+        </header>
+
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="showTab('cosa-sono', this)">Cosa Sono</button>
+            <button class="tab-btn" onclick="showTab('procedura', this)">Procedura</button>
+            <button class="tab-btn" onclick="showTab('vantaggi', this)">Vantaggi</button>
+            <button class="tab-btn" onclick="showTab('demo', this)">Demo Interattiva</button>
+            <button class="tab-btn" onclick="showTab('faq', this)">Domande</button>
+        </div>
+
+        <div id="cosa-sono" class="content-section active">
+            <h2>🔍 Cosa Sono le Faccette Dentali?</h2>
+            
+            <div class="info-box">
+                <p><strong>Le faccette dentali sono sottili lamine in ceramica</strong>, simili a lenti a contatto, che vengono applicate sulla superficie esterna dei denti per migliorare il sorriso.</p>
+            </div>
+
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <h3>📏 Spessore</h3>
+                    <p>Tra 0,5 e 0,7 millimetri - sottili come un guscio d'uovo!</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>🎨 Materiali</h3>
+                    <p>Ceramica o disilicato di litio - resistenti e naturali</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>⏱️ Durata</h3>
+                    <p>10-15 anni con la giusta cura</p>
+                </div>
+            </div>
+
+            <h2>🎯 Problemi che Risolvono</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Denti Scoloriti</h3>
+                    <p>Coprono macchie permanenti che lo sbiancamento non può eliminare</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Denti Scheggiati</h3>
+                    <p>Riparano denti danneggiati o fratturati</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📐</div>
+                    <h3>Denti Disallineati</h3>
+                    <p>Correggono piccoli difetti di posizione</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">↔️</div>
+                    <h3>Spazi tra i Denti</h3>
+                    <p>Chiudono gli spazi indesiderati (diastemi)</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="procedura" class="content-section">
+            <h2>📋 Procedura Passo per Passo</h2>
+            
+            <div class="info-box warning">
+                <strong>⏱️ Tempo totale:</strong> 2-4 settimane dall'inizio al risultato finale
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1. Consulenza Iniziale</h3>
+                    <p>Il dentista esamina i tuoi denti, discute i tuoi obiettivi estetici e crea un piano personalizzato. Vengono raccolte foto, scansioni digitali e radiografie.</p>
+                    <div class="info-box" style="margin-top: 15px;">
+                        <strong>Cosa aspettarsi:</strong> Valutazione completa della salute dentale e discussione delle aspettative
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2. Progettazione Digitale</h3>
+                    <p>Con l'odontoiatria digitale, il dentista progetta il tuo nuovo sorriso al computer. Puoi vedere un'anteprima del risultato finale direttamente nella tua bocca!</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>3. Preparazione dei Denti</h3>
+                    <p>Il dentista rimuove una quantità minima di smalto (0,5 mm - lo spessore di un'unghia) dalla superficie del dente. In alcuni casi, se il dente è già consumato, non serve rimuovere nulla!</p>
+                    <div class="info-box success" style="margin-top: 15px;">
+                        <strong>✓ Procedura minimamente invasiva</strong> - viene preservata la maggior parte del dente naturale
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>4. Impronte e Faccette Provvisorie</h3>
+                    <p>Viene presa un'impronta digitale (con scanner) o tradizionale. Ti vengono applicate faccette provvisorie che proteggono i denti mentre il laboratorio crea quelle definitive.</p>
+                    <div class="info-box" style="margin-top: 15px;">
+                        <strong>Durata:</strong> 1-2 settimane con le provvisorie
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>5. Applicazione Finale</h3>
+                    <p>Le faccette definitive vengono provate per verificare forma, colore e adattamento. Poi vengono incollate permanentemente con un adesivo speciale e fotopolimerizzate con luce UV.</p>
+                    <div class="info-box success" style="margin-top: 15px;">
+                        <strong>🎉 Risultato immediato:</strong> Il tuo nuovo sorriso è pronto!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="vantaggi" class="content-section">
+            <h2>✨ Vantaggi delle Faccette Dentali</h2>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Aspetto Naturale</h3>
+                    <p>La ceramica riflette la luce come i denti naturali</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Risultati Rapidi</h3>
+                    <p>Trasformazione completa in 2-4 settimane</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Resistenti</h3>
+                    <p>Il materiale non si macchia e non si scolorisce</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Protezione</h3>
+                    <p>Proteggono i denti dall'usura</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">😊</div>
+                    <h3>Biocompatibili</h3>
+                    <p>Non causano allergie o infiammazioni gengivali</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔬</div>
+                    <h3>Minimamente Invasivo</h3>
+                    <p>Preserva la maggior parte del dente naturale</p>
+                </div>
+            </div>
+
+            <h2>📊 Confronto: Prima e Dopo</h2>
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <h3>❌ Prima delle Faccette</h3>
+                    <ul>
+                        <li>Denti scoloriti o macchiati</li>
+                        <li>Forma irregolare</li>
+                        <li>Piccole scheggiature</li>
+                        <li>Spazi tra i denti</li>
+                        <li>Superficie usurata</li>
+                    </ul>
+                </div>
+                <div class="comparison-card">
+                    <h3>✅ Dopo le Faccette</h3>
+                    <ul>
+                        <li>Sorriso bianco e brillante</li>
+                        <li>Denti perfettamente allineati</li>
+                        <li>Forma armoniosa e uniforme</li>
+                        <li>Spazi chiusi</li>
+                        <li>Aspetto giovane e curato</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box success">
+                <h3>💡 Cura e Manutenzione</h3>
+                <ul>
+                    <li>Spazzola i denti due volte al giorno</li>
+                    <li>Usa il filo interdentale regolarmente</li>
+                    <li>Visite di controllo ogni 6 mesi</li>
+                    <li>Evita di mordere oggetti duri</li>
+                    <li>Usa un bite notturno se digrigni i denti</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="demo" class="content-section">
+            <h2>🎮 Dimostrazione Interattiva</h2>
+            
+            <div class="interactive-demo">
+                <h3 style="color: var(--color-primary); margin-bottom: 20px;">Visualizza i Casi Clinici</h3>
+                <p style="margin-bottom: 30px; color: var(--color-text-secondary);">Seleziona un caso per vedere come le faccette risolvono diversi problemi dentali</p>
+                
+                <div class="dental-model">
+                    <div class="case-selector">
+                        <button class="case-btn active" onclick="showCase('stained', this)">🎨 Denti Macchiati</button>
+                        <button class="case-btn" onclick="showCase('spaced', this)">↔️ Spazi tra Denti</button>
+                        <button class="case-btn" onclick="showCase('chipped', this)">🔧 Denti Scheggiati</button>
+                        <button class="case-btn" onclick="showCase('crooked', this)">📐 Disallineamento</button>
+                    </div>
+
+                    <div class="case-description" id="case-description">
+                        <strong>Denti Macchiati:</strong> Le faccette coprono permanentemente macchie e scolorimenti che lo sbiancamento non può eliminare.
+                    </div>
+
+                    <div class="mouth-view">
+                        <div class="upper-teeth" id="tooth-container">
+                            <div class="gum-line"></div>
+                            <div class="tooth stained canine" data-index="0">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Canino</div>
+                            </div>
+                            <div class="tooth stained incisor" data-index="1">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Incisivo</div>
+                            </div>
+                            <div class="tooth stained incisor" data-index="2">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Incisivo</div>
+                            </div>
+                            <div class="tooth stained incisor" data-index="3">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Incisivo</div>
+                            </div>
+                            <div class="tooth stained incisor" data-index="4">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Incisivo</div>
+                            </div>
+                            <div class="tooth stained canine" data-index="5">
+                                <div class="veneer-layer"></div>
+                                <div class="tooth-label">Canino</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="demo-btn" onclick="applyVeneers()">✨ Applica Faccette</button>
+                    <button class="demo-btn secondary" onclick="removeVeneers()">↺ Resetta</button>
+                </div>
+
+                <div class="info-box" style="margin-top: 30px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px;">🔬 Cosa Osservi?</h3>
+                    <p>Le faccette si applicano sulla superficie esterna del dente, correggendo immediatamente il problema. Nota la trasformazione istantanea: i denti diventano perfettamente bianchi, uniformi e allineati!</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px;">📐 Processo di Adesione</h2>
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <h3>1. Pulizia</h3>
+                    <p>Il dente viene pulito accuratamente</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>2. Mordenzatura</h3>
+                    <p>Applicazione di acido per pochi secondi per creare micro-pori</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>3. Adesivo</h3>
+                    <p>Applicazione di uno speciale adesivo dentale</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>4. Posizionamento</h3>
+                    <p>La faccetta viene posizionata con precisione</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>5. Fotopolimerizzazione</h3>
+                    <p>Luce UV che indurisce l'adesivo istantaneamente</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>6. Rifinitura</h3>
+                    <p>Rimozione dell'eccesso e lucidatura finale</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="faq" class="content-section">
+            <h2>❓ Domande Frequenti</h2>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Le faccette fanno male?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No, la procedura è indolore. Durante la preparazione dei denti viene utilizzata l'anestesia locale, quindi non sentirai alcun dolore. Dopo l'applicazione potresti avere una leggera sensibilità che scompare in pochi giorni.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Quanto durano le faccette?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Con una corretta igiene orale e cure regolari, le faccette dentali durano in media 10-15 anni. Alcuni pazienti le mantengono anche più a lungo. La durata dipende dalla cura quotidiana e dalle visite di controllo regolari.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Si possono rimuovere le faccette?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Le faccette sono considerate permanenti perché viene rimossa una piccola quantità di smalto. Tuttavia, possono essere sostituite se necessario. Solo un dentista qualificato può rimuoverle in sicurezza.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Le faccette si macchiano?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No! La ceramica è un materiale resistente alle macchie. A differenza dei denti naturali, le faccette non si scolorano con caffè, tè, vino rosso o fumo. Mantengono il loro colore brillante nel tempo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Posso mangiare normalmente?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sì! Dopo un breve periodo di adattamento, puoi mangiare normalmente. Evita però di mordere oggetti molto duri (come ghiaccio o noccioli) che potrebbero danneggiare le faccette, così come faresti con i denti naturali.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Quanto costa il trattamento?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Il costo varia in base al numero di faccette necessarie, al materiale scelto e alla complessità del caso. Durante la consulenza iniziale, il dentista ti fornirà un preventivo dettagliato personalizzato.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Sono adatte a tutti?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Le faccette sono ideali per la maggior parte delle persone con denti sani. Non sono consigliate se hai malattie gengivali attive, carie non trattate, o se digrigni molto i denti (in questo caso è necessario un bite notturno).</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <span>Qual è la differenza tra faccette e corone?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Le faccette coprono solo la parte frontale del dente e sono minimamente invasive. Le corone coprono l'intero dente e richiedono una maggiore riduzione del dente naturale. Le faccette sono ideali per problemi estetici, mentre le corone sono usate per denti più danneggiati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId, buttonElement) {
+            const sections = document.querySelectorAll('.content-section');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+            
+            // Scroll to top on mobile for better UX
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                window.scrollTo({
+                    top: 300,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        let currentCase = 'stained';
+
+        function showCase(caseType, buttonElement) {
+            currentCase = caseType;
+            const container = document.getElementById('tooth-container');
+            const description = document.getElementById('case-description');
+            const buttons = document.querySelectorAll('.case-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+            
+            removeVeneers();
+            
+            const descriptions = {
+                'stained': '<strong>Denti Macchiati:</strong> Le faccette coprono permanentemente macchie e scolorimenti che lo sbiancamento non può eliminare.',
+                'spaced': '<strong>Spazi tra Denti:</strong> Le faccette chiudono i diastemi (spazi) creando un sorriso armonioso e uniforme.',
+                'chipped': '<strong>Denti Scheggiati:</strong> Le faccette riparano scheggiature e fratture, ripristinando la forma originale del dente.',
+                'crooked': '<strong>Disallineamento:</strong> Le faccette correggono piccoli difetti di posizione senza bisogno di apparecchio.'
+            };
+            
+            description.innerHTML = descriptions[caseType];
+            
+            let teethHTML = '<div class="gum-line"></div>';
+            
+            switch(caseType) {
+                case 'stained':
+                    teethHTML += `
+                        <div class="tooth stained canine" data-index="0"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                        <div class="tooth stained incisor" data-index="1"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth stained incisor" data-index="2"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth stained incisor" data-index="3"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth stained incisor" data-index="4"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth stained canine" data-index="5"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                    `;
+                    break;
+                case 'spaced':
+                    teethHTML += `
+                        <div class="tooth spaced canine" data-index="0"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                        <div class="tooth spaced incisor" data-index="1"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth spaced incisor" data-index="2"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth spaced incisor" data-index="3"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth spaced incisor" data-index="4"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth spaced canine" data-index="5"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                    `;
+                    break;
+                case 'chipped':
+                    teethHTML += `
+                        <div class="tooth canine" data-index="0"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                        <div class="tooth chipped incisor" data-index="1"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth incisor" data-index="2"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth incisor" data-index="3"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth chipped incisor" data-index="4"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth canine" data-index="5"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                    `;
+                    break;
+                case 'crooked':
+                    teethHTML += `
+                        <div class="tooth crooked canine" data-index="0"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                        <div class="tooth crooked incisor" data-index="1"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth crooked incisor" data-index="2"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth crooked incisor" data-index="3"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth crooked incisor" data-index="4"><div class="veneer-layer"></div><div class="tooth-label">Incisivo</div></div>
+                        <div class="tooth crooked canine" data-index="5"><div class="veneer-layer"></div><div class="tooth-label">Canino</div></div>
+                    `;
+                    break;
+            }
+            
+            container.innerHTML = teethHTML;
+        }
+
+        function applyVeneers() {
+            const teeth = document.querySelectorAll('.tooth');
+            teeth.forEach((tooth, index) => {
+                setTimeout(() => {
+                    tooth.classList.add('with-veneer');
+                    if (currentCase === 'spaced') {
+                        tooth.classList.remove('spaced');
+                        tooth.style.marginRight = '0';
+                    }
+                    if (currentCase === 'crooked') {
+                        tooth.style.transform = 'rotate(0deg)';
+                    }
+                    if (currentCase === 'chipped') {
+                        tooth.classList.remove('chipped');
+                    }
+                    if (currentCase === 'stained') {
+                        tooth.classList.remove('stained');
+                    }
+                }, index * 400);
+            });
+        }
+
+        function removeVeneers() {
+            const teeth = document.querySelectorAll('.tooth');
+            teeth.forEach(tooth => {
+                tooth.classList.remove('with-veneer');
+                tooth.style.transform = '';
+                tooth.style.marginRight = '';
+            });
+        }
+
+        function toggleFAQ(element) {
+            const wasActive = element.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                element.classList.add('active');
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('tooth')) {
+                e.target.classList.toggle('with-veneer');
+                
+                if (currentCase === 'spaced' && e.target.classList.contains('with-veneer')) {
+                    e.target.style.marginRight = '0';
+                    e.target.classList.remove('spaced');
+                } else if (currentCase === 'spaced' && !e.target.classList.contains('with-veneer')) {
+                    e.target.style.marginRight = '';
+                    e.target.classList.add('spaced');
+                }
+                
+                if (currentCase === 'crooked') {
+                    if (e.target.classList.contains('with-veneer')) {
+                        e.target.style.transform = 'rotate(0deg)';
+                    } else {
+                        e.target.style.transform = '';
+                    }
+                }
+                
+                if (currentCase === 'chipped' || currentCase === 'stained') {
+                    const className = currentCase === 'chipped' ? 'chipped' : 'stained';
+                    if (e.target.classList.contains('with-veneer')) {
+                        e.target.classList.remove(className);
+                    } else {
+                        e.target.classList.add(className);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
